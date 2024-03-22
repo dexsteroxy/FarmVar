@@ -2,7 +2,10 @@ import React from "react";
 import people from "../assets/bigfish.jpg";
 import water from "../assets/dried.jpg";
 import cat from "../assets/main.jpeg";
-
+import faq from "../assets/ring.jpg";
+import feed from "../assets/feed.jpeg";
+import camara from '../assets/camara.jpeg'
+// https://www.youtube.com/shorts/gE9vqvsiG64?feature=share
 const Product = () => {
   return (
     <section className=" mt-32 mb-6">
@@ -33,8 +36,8 @@ const Product = () => {
           {/* img */}
           <div className=" relative overflow-hidden">
             <img
-              className=" group-hover:scale-110 transition-all duration-500"
-              src={people}
+              className=" group-hover:scale-110  transition-all duration-500"
+              src={faq}
               alt=""
             />
             {/* badge */}
@@ -42,7 +45,7 @@ const Product = () => {
           {/* text */}
           <div className=" px-3  py-6 flex flex-col">
             <h1 className=" text-center font-semibold text-xl pb-3 font-poppins text-amazon_blue">
-              Indigenous Fish
+              Cage Installation
             </h1>
 
             <p className=" text-[15px] font-poppins text-gray-500 text-center">
@@ -65,7 +68,7 @@ const Product = () => {
           <div className=" relative overflow-hidden">
             <img
               className=" group-hover:scale-110  w-full transition-all duration-500"
-              src={water}
+              src={feed}
               alt=""
             />
             {/* badge */}
@@ -73,7 +76,7 @@ const Product = () => {
           {/* text */}
           <div className=" px-3  py-6 flex flex-col">
             <h1 className=" text-center font-semibold text-2xl font-poppins text-amazon_blue">
-              Dried Fish
+              Feeds Training
             </h1>
 
             <p className=" text-[15px] font-poppins text-gray-500 text-center">
@@ -95,7 +98,7 @@ const Product = () => {
           <div className=" relative overflow-hidden">
             <img
               className=" group-hover:scale-110 h-[215px]  w-full transition-all duration-500"
-              src={cat}
+              src={camara}
               alt=""
             />
             {/* badge */}
@@ -103,7 +106,7 @@ const Product = () => {
           {/* text */}
           <div className=" px-3  py-6 flex flex-col">
             <h1 className=" text-center font-semibold text-2xl font-poppins text-amazon_blue">
-              Dried Fish
+              App Security
             </h1>
 
             <p className=" text-[15px] font-poppins text-gray-500 text-center">

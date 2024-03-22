@@ -18,8 +18,8 @@ import ScrollTrigger from "react-scroll-trigger";
 
 const About = () => {
   const [conterOn, setCounterOn] = useState(false);
-  const [counting, setCounting] = useState(false)
-  const [counted, setCounted] =useState(false)
+  const [counting, setCounting] = useState(false);
+  const [counted, setCounted] = useState(false);
 
   return (
     <section className=" mt-20">
@@ -31,12 +31,12 @@ const About = () => {
             <img src={fish} alt="fish img" />
             {/* <Number to={100} */}
 
-            <div className=" flex gap-16 mt-4">
+            <div className=" flex gap-16 mt-4 px-3 lg:px-0">
               <ScrollTrigger
                 onEnter={() => setCounterOn(true)}
                 onExit={() => setCounterOn(false)}
               >
-                <span className=" gap-x-2 items-center flex">
+                <span className=" gap-x-2 items-center  flex">
                   <h1 className=" text-2xl font-poppins font-semibold text-amazon_blue">
                     {conterOn && (
                       <CountUp start={0} end={42} duration={4} delay={0} />
@@ -81,7 +81,7 @@ const About = () => {
               </ScrollTrigger>
             </div>
 
-            <div className=" flex gap-[89px]">
+            <div className=" flex gap-[89px] px-6 lg:px-0">
               <p className=" text-[15px] font-poppins text-gray-500">
                 {" "}
                 Fish Cages

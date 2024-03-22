@@ -9,8 +9,8 @@ const AboutFarm = () => {
   const [showMission, setShowMission] = useState(false);
   const [showVission, setShowVission] = useState(false);
   const [showModal, setShowModal] = useState(true);
-  const [show, setShow] = useState(false)
-  const [showMe, setShowMe] = useState(false)
+  const [show, setShow] = useState(false);
+  const [showMe, setShowMe] = useState(false);
   return (
     <div className=" font-poppins">
       <div className=" pt-20 bg-secondHero bg-cover bg-center font-poppins h-52">
@@ -26,9 +26,9 @@ const AboutFarm = () => {
       <div className=" flex px-6 gap-x-8 mt-20 mb-4 flex-col lg:flex-row">
         {/* text part */}
         <div>
-          <h4 className=" font-medium font-poppins">// About Us</h4>
+          <h4 className=" font-medium font-poppins text-green-950">// About Us</h4>
 
-          <h1 className=" font-poppins text-4xl font-bold text-amazon_blue">
+          <h1 className=" font-poppins text-4xl font-bold text-green-950">
             The Fish Company of Choice
           </h1>
 
@@ -113,8 +113,8 @@ const AboutFarm = () => {
           <img src={people} className="" alt="" />
         </div>
         <div className="w-[55%] mt-32 bg-gray-100 p-6 ">
-          <h3 className="font-medium font-poppins"> // OUR PASSION</h3>
-          <h1 className=" font-bold text-4xl mt-4 text-amazon_blue font-poppins">
+          <h3 className="font-medium font-poppins text-green-950"> // OUR PASSION</h3>
+          <h1 className=" font-bold text-4xl mt-4 text-green-950 font-poppins">
             Always Ready to Supply You With The Best Fish
           </h1>
           <p className=" text-[17px] mt-5 leading-6 font-poppins text-gray-500">
@@ -138,7 +138,7 @@ const AboutFarm = () => {
       </div>
 
       <div className=" bg-gray-100 p-6">
-        <h3 className=" font-semibold">// OUR CORE VALUES</h3>
+        <h3 className=" font-semibold text-green-950">// OUR CORE VALUES</h3>
         <h1 className=" font-bold text-4xl mt-4 font-poppins text-green-950">
           Passion For Fish, People & Sustainability
         </h1>
@@ -178,10 +178,17 @@ const AboutFarm = () => {
         </p>
 
         {/* flex container */}
-        <div>
+        <div className=" flex items-center justify-center space-x-16">
           <div className=" flex flex-col gap-y-5 mt-12">
-
-            <div onClick={() => {setShowModal(!showModal)}}  className={` ${showModal && 'bg-gray-500 transition-all ease-in-out duration-500'} h-10 w-[520px] transition-all ease-in-out duration-500 bg-white  shadow-sm text-center flex items-center`}>
+            <div
+              onClick={() => {
+                setShowModal(!showModal);
+              }}
+              className={` ${
+                showModal &&
+                " bg-gray-600 transition-all ease-in-out duration-500"
+              } h-10 w-[520px] transition-all ease-in-out duration-500 bg-white  shadow-sm text-center flex items-center`}
+            >
               <div>
                 <p className=" p-2 pl-5 items-center font-poppins text-[20px] font-semibold text-green-950 cursor-pointer">
                   TRUST: why should you trust us?{" "}
@@ -192,63 +199,118 @@ const AboutFarm = () => {
               </div>
             </div>
 
-           {
-            showModal && (
+            {showModal && (
               <div className=" h-52 w-[520px]  flex space-x-6 items-center p-4">
-              <img src={people} className=" h-32" />
-              <p className=" font-poppins text-[15px] text-gray-500">
-                We are transparent in our business practices, hence we ensure
-                every process is quality assured.
-              </p>
-            </div>
-            )
-           }
+                <img src={people} className=" h-32" />
+                <p className=" font-poppins text-[15px] text-gray-500">
+                  We are transparent in our business practices, hence we ensure
+                  every process is quality assured.
+                </p>
+              </div>
+            )}
 
-            <div onClick={() => {setShow(!show)}} className={` ${show && 'bg-gray-500 transition-all ease-in-out duration-500'} h-10 w-[520px] transition-all ease-in-out duration-500 bg-white  shadow-sm text-center flex items-center`}>
-            <div>
-              <p className=" p-2 pl-5 items-center font-poppins text-[20px] font-semibold text-green-950 cursor-pointer">
-                INGENUITY: why should you trust us?{" "}
-                <span>
-                  <i class="fa-solid fa-circle-plus ml-[80px]"></i>
-                </span>
-              </p>
+            <div
+              onClick={() => {
+                setShow(!show);
+              }}
+              className={` ${
+                show && "bg-gray-600 transition-all ease-in-out duration-500"
+              } h-10 w-[520px] transition-all ease-in-out duration-500 bg-white  shadow-sm text-center flex items-center`}
+            >
+              <div>
+                <p className=" p-2 pl-5 items-center font-poppins text-[20px] font-semibold text-green-950 cursor-pointer">
+                  INGENUITY: why should you trust us?{" "}
+                  <span>
+                    <i class="fa-solid fa-circle-plus ml-[80px]"></i>
+                  </span>
+                </p>
+              </div>
             </div>
-          </div>
-          {
-            show && (
+            {show && (
               <div className=" h-52 w-[520px]  flex space-x-6 items-center p-4">
-              <img src={people} className=" h-32" />
-              <p className=" font-poppins text-[15px] text-gray-500">
-                We are transparent in our business practices, hence we ensure
-                every process is quality assured.
-              </p>
-            </div>
-            )
-           }
+                <img src={people} className=" h-32" />
+                <p className=" font-poppins text-[15px] text-gray-500">
+                  We are transparent in our business practices, hence we ensure
+                  every process is quality assured.
+                </p>
+              </div>
+            )}
 
-
-          <div onClick={() => {setShowMe(!showMe)}} className={` ${showMe && 'bg-gray-500 transition-all ease-in-out duration-500'} h-10 w-[520px] bg-white shadow-sm text-center flex items-center`}>
-            <div>
-              <p className=" p-2 pl-5 items-center font-poppins text-[20px] font-semibold text-green-950 cursor-pointer">
-                PARTNERSHIP: why should you trust us?{" "}
-                <span>
-                  <i class="fa-solid fa-circle-plus ml-[53px]"></i>
-                </span>
-              </p>
+            <div
+              onClick={() => {
+                setShowMe(!showMe);
+              }}
+              className={` ${
+                showMe && "bg-gray-600 transition-all ease-in-out duration-500"
+              } h-10 w-[520px] bg-white shadow-sm text-center flex items-center`}
+            >
+              <div>
+                <p className=" p-2 pl-5 items-center font-poppins text-[20px] font-semibold text-green-950 cursor-pointer">
+                  PARTNERSHIP: why should you trust us?{" "}
+                  <span>
+                    <i class="fa-solid fa-circle-plus ml-[53px]"></i>
+                  </span>
+                </p>
+              </div>
             </div>
-          </div>
-          {
-            showMe && (
+            {showMe && (
               <div className=" h-52 w-[520px]  flex space-x-6 items-center p-4">
-              <img src={people} className=" h-32" />
-              <p className=" font-poppins text-[15px] text-gray-500">
-                We are transparent in our business practices, hence we ensure
-                every process is quality assured.
-              </p>
-            </div>
-            )
-           }
+                <img src={people} className=" h-32" />
+                <p className=" font-poppins text-[15px] text-gray-500">
+                  We are transparent in our business practices, hence we ensure
+                  every process is quality assured.
+                </p>
+              </div>
+            )}
           </div>
+      
+
+        <div className="">
+          <p className=" font-poppins font-semibold text-green-950 mt-5">
+            Nutritious
+          </p>
+          <span className="h-2 block w-[500px] bg-green-950 relative mt-5">
+            <span className=" absolute left-[450px] bg-green-950 text-white w-12">
+              100%
+            </span>
+          </span>
+
+          <p className=" font-poppins font-semibold text-green-950 mt-5">
+            Affordable
+          </p>
+          <span className="h-2 block w-[500px] bg-green-950 relative mt-5">
+            <span className=" absolute left-[450px] bg-green-950 text-white w-12">
+              100%
+            </span>
+          </span>
+
+          <p className=" font-poppins font-semibold text-green-950 mt-5">
+            Fresh
+          </p>
+          <span className="h-2 block w-[500px] bg-green-950 relative mt-5">
+            <span className=" absolute left-[450px] bg-green-950 text-white w-12">
+              100%
+            </span>
+          </span>
+
+          <p className=" font-poppins font-semibold text-green-950 mt-5">
+            Tasty
+          </p>
+          <span className="h-2 block w-[500px] bg-green-950 relative mt-5">
+            <span className=" absolute left-[450px] bg-green-950 text-white w-12">
+              100%
+            </span>
+          </span>
+
+          <p className=" font-poppins font-semibold text-green-950 mt-5">
+            Natural
+          </p>
+          <span className="h-2 block w-[500px] bg-green-950 relative mt-5">
+            <span className=" absolute left-[450px] bg-green-950 text-white w-12">
+              100%
+            </span>
+          </span>
+        </div>
         </div>
       </div>
     </div>
